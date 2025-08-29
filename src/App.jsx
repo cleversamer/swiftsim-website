@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-import Home from "pages/Home";
+import HomePage from "pages/HomePage";
+import RefreshPage from "pages/RefreshPage";
 import { ROUTES } from "client";
 
 const App = () => {
@@ -18,7 +19,8 @@ const App = () => {
       />
 
       <Routes>
-        <Route path={ROUTES.CLIENT.HOME} element={<Home />} />
+        <Route path={ROUTES.CLIENT.REFRESH} element={<RefreshPage />} />
+        <Route path={ROUTES.CLIENT.HOME} element={<HomePage />} />
         <Route
           path="/"
           element={<Navigate to={ROUTES.CLIENT.HOME} replace />}
